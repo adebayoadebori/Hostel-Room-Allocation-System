@@ -9033,6 +9033,35 @@ strong {
   margin: 5px;
   font-size: 11px; }
 
+
+p.copyright-agileinfo {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 300;
+}
+
+footer p a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer p a:hover {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+
+footer {
+    padding: 4em 0;
+    text-align: center;
+}
+
 @media (max-width: 767.98px) {
   .fc-toolbar .fc-left,
   .fc-toolbar .fc-right,
