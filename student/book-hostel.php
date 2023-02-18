@@ -298,7 +298,7 @@
                     </div>
                     
 
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <!-- <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Total Amount</h4>
@@ -307,7 +307,7 @@
                                     </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                   
                 
                 </div>
