@@ -17,7 +17,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Hostel Management System</title>
+    <title>Room Details</title>
     <!-- Custom CSS -->
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -110,16 +110,15 @@
                                             </tr>
 
                                             <tr>
+                                            <td><b>Hostel :</b></td>
+                                            <td><?php echo $row->roomno;?></td>
 
                                             <td><b>Room no :</b></td>
                                             <td><?php echo $row->roomno;?></td>
 
-                                            <td><b>Starting Date :</b></td>
-                                            <td><?php echo $row->stayfrom;?></td>
-
                                             <td><b>Seater :</b></td>
                                             <td><?php echo $row->seater;?></td>
-                                            <!-- By CodeAstro - codeastro.com -->
+                                         
 
                                             </tr>
 
@@ -145,6 +144,9 @@
                                             </tr>
 
                                             <tr>
+                                            <td><b>Starting Date :</b></td>
+                                            <td><?php echo $row->stayfrom;?></td>
+                                            
                                             <td colspan="6"><b>Total Fees (<?php echo ($dr).' months'?>) : 
                                             <?php if($row->foodstatus==1){ 
                                             $fd=211; 

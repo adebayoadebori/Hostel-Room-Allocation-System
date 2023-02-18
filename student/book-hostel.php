@@ -48,7 +48,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Hostel Management System</title>
+    <title>Book Hostel</title>
     <!-- Custom CSS -->
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -161,6 +161,32 @@
                 
                 <div class="row">
 
+                
+
+
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Hostel</h4>
+                                    <div class="form-group mb-4">
+                                        <select class="custom-select mr-sm-2" name="room" id="room" onChange="getSeater(this.value);" onBlur="checkAvailability()" required id="inlineFormCustomSelect">
+                                            <option selected>Select...</option>
+                                            <?php $query ="SELECT * FROM rooms";
+                                            $stmt2 = $mysqli->prepare($query);
+                                            $stmt2->execute();
+                                            $res=$stmt2->get_result();
+                                            while($row=$res->fetch_object())
+                                            {
+                                            ?>
+                                            <option value="<?php echo $row->room_no;?>"> <?php echo $row->room_no;?></option>
+                                            <?php } ?>
+                                        </select>
+                                        
+                                    </div>
+                              
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card">
@@ -185,7 +211,6 @@
                             </div>
                         </div>
                     </div>
-<!-- By CodeAstro - codeastro.com -->
                 
  
                     <div class="col-sm-12 col-md-6 col-lg-4">

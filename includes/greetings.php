@@ -1,6 +1,6 @@
 <?php 
  
-    date_default_timezone_set('America/Chicago');
+    date_default_timezone_set('Asia/Kolkata');
     //Here we define out main variables 
     $welcome_string="Welcome"; 
     $numeric_date=date("G"); 
@@ -23,6 +23,6 @@
          while($row=$res->fetch_object())
          {
     
-    echo "<h3 class='page-title text-truncate text-dark font-weight-medium mb-1'>$welcome_string $row->firstName! </h3>"; }
+    echo "<h3 class='page-title text-truncate text-light font-weight-medium mb-1'>$welcome_string $row->firstName ! </h3>"; }
  
 ?>

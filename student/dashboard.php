@@ -18,7 +18,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Hostel Management System</title>
+    <title>Student Dashboard</title>
     <!-- Custom CSS -->
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -47,6 +47,7 @@
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
             <?php include '../includes/student-navigation.php'?>
+            
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -70,95 +71,145 @@
         <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
+            <!-- ============================================================== 
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                       <?php include '../includes/greetings.php'?>
+                       
                         <div class="d-flex align-items-center">
-                            <!-- <nav aria-label="breadcrumb">
-                                
-                            </nav> -->
                         </div>
                     </div>
                     
                 </div>
-                <!-- By CodeAstro - codeastro.com -->
             </div>
-            <!-- ============================================================== -->
+             ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- *************************************************************** -->
-                <!-- Start First Cards -->
-                <!-- *************************************************************** -->
-                <div class="card-group">
-                    <div class="card border-right">
-                        <div class="card-body">
-                            <div class="d-flex d-lg-flex d-md-block align-items-center">
-                                <div>
-                                    <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium"><?php include 'counters/student-count.php'?></h2>
-                                
-                                    </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Registered Students</h6>
-                                </div>
-                                <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="user-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- By CodeAstro - codeastro.com -->
-                    <div class="card border-right">
-                        <div class="card-body">
-                            <div class="d-flex d-lg-flex d-md-block align-items-center">
-                                <div>
-                                    <h2 class="text-dark mb-1 w-100 text-truncate font-weight-medium"><?php include 'counters/room-count.php'?></h2>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Total Rooms
-                                    </h6>
-                                </div>
-                                <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="grid"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-right">
-                        <div class="card-body">
-                            <div class="d-flex d-lg-flex d-md-block align-items-center">
-                                <div>
-                                    <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium"><?php include 'counters/booked-count.php'?></h2>
-                                    </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Booked Rooms</h6>
-                                </div>
-                                <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="book-open"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex d-lg-flex d-md-block align-items-center">
-                                <div>
-                                    <h2 class="text-dark mb-1 font-weight-medium"><?php include 'counters/course-count.php'?></h2>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Featured Courses</h6>
-                                </div>
-                                <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="slideshow-container">
+               
+                <style>
+                    
+                    body {
+                        font-family: Verdana, sans-serif;
+                        margin: 0
+                    }
+                    .mySlides {
+                        display: none
+                    }
+                    img {
+                        vertical-align: middle;
+                    }
+                    .slideshow-container {
+                        
+                        position: relative;
+                        margin: auto;
+                        
+                    }
+                    /* Next & previous buttons */
+                    .prev,
+                    .next {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 50%;
+                        width: auto;
+                        padding: 16px;
+                        margin-top: -22px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        transition: 0.6s ease;
+                        border-radius: 0 3px 3px 0;
+                        user-select: none;
+                        background-color: rgba(0, 0, 0, 0.4);
+                    }
+                    /* Position the "next button" to the right */
+                    .next {
+                        right: 0;
+                        border-radius: 3px 0 0 3px;
+                    }
+                    /* On hover, add a black background color with a little bit see-through */
+                    .prev:hover,
+                    .next:hover {
+                        background-color: rgba(0, 0, 0, 0.8);
+                    }
+                    /* Caption text */
+                    .text {
+                        color: #000;
+                        font-size: 15px;
+                    
+                        position: 
+                        
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .fade {
+                        -webkit-animation-name: fade;
+                        -webkit-animation-duration: 5s;
+                        animation-name: fade;
+                        animation-duration: 5s;
+                    }
+                    @-webkit-keyframes fade {
+                        from {
+                        opacity: .8
+                        }
+                        to {
+                        opacity: 1
+                        }
+                    }
+                    @keyframes fade {
+                        from {
+                        opacity: .8
+                        }
+                        to {
+                        opacity: 1
+                        }
+                    }
+            
+                
+                </style>
+            
+                
+                <div class="mySlides fade">
+                    <img src="../assets/images/1.jpg" style="width:100%">
                 </div>
-                <!-- *************************************************************** -->
-                <!-- End First Cards -->
-                <!-- *************************************************************** -->
+                <div class="mySlides fade">
+                    <img src="../assets/images/2.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="../assets/images/3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="../assets/images/4.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="../assets/images/5.jpg" style="width:100%">
+                </div>
+                <!--
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                -->
+
+                <script>
+                    var slideIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > x.length) {slideIndex = 1}
+                    x[slideIndex-1].style.display = "block";
+                    setTimeout(carousel, 2200); // Change image every 2 seconds
+                    }
+                </script>
+  
                 
                
             </div>
@@ -189,7 +240,6 @@
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- apps -->
     <!-- apps -->
-    <!-- By CodeAstro - codeastro.com -->
     <script src="../dist/js/app-style-switcher.js"></script>
     <script src="../dist/js/feather.min.js"></script>
     <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
