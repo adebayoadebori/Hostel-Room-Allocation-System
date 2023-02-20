@@ -111,7 +111,7 @@
 
                                             <tr>
                                             <td><b>Hostel :</b></td>
-                                            <td><?php echo $row->roomno;?></td>
+                                            <td><?php echo $row->hostel;?></td>
 
                                             <td><b>Room no :</b></td>
                                             <td><?php echo $row->roomno;?></td>
@@ -137,7 +137,7 @@
                                             ;?> </td>
 
                                             <td><b>Fees Per Month :</b></td>
-                                            <td>$<?php echo $fpm=$row->feespm;?></td>
+                                            <td>₹ <?php echo $fpm=$row->feespm;?></td>
 
                                             
 
@@ -150,9 +150,9 @@
                                             <td colspan="6"><b>Total Fees (<?php echo ($dr).' months'?>) : 
                                             <?php if($row->foodstatus==1){ 
                                             $fd=211; 
-                                            echo '$'.(($fd+$fpm)*$dr);
+                                            echo '₹ '.(($fd+$fpm)*$dr);
                                             } else {
-                                            echo '$'.$dr*$fpm;
+                                            echo '₹ '.$dr*$fpm;
                                             }
                                             ?></b></td>
                                             </tr>

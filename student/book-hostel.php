@@ -5,6 +5,7 @@
     check_login();
     if(isset($_POST['submit'])){
         $roomno=$_POST['room'];
+        $hostel=$_POST['hostel'];
         $seater=$_POST['seater'];
         $feespm=$_POST['fpm'];
         $foodstatus=$_POST['foodstatus'];
@@ -28,9 +29,9 @@
         $paddress=$_POST['paddress'];
         $pcity=$_POST['pcity'];
         $ppincode=$_POST['ppincode'];
-        $query="INSERT into  registration(roomno,seater,feespm,foodstatus,stayfrom,duration,course,regno,firstName,middleName,lastName,gender,contactno,emailid,egycontactno,guardianName,guardianRelation,guardianContactno,corresAddress,corresCIty,corresPincode,pmntAddress,pmntCity,pmntPincode) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $query="INSERT into  registration(roomno,hostel,seater,feespm,foodstatus,stayfrom,duration,course,regno,firstName,middleName,lastName,gender,contactno,emailid,egycontactno,guardianName,guardianRelation,guardianContactno,corresAddress,corresCIty,corresPincode,pmntAddress,pmntCity,pmntPincode) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $mysqli->prepare($query);
-        $rc=$stmt->bind_param('iiiisissssssisissississi',$roomno,$seater,$feespm,$foodstatus,$stayfrom,$duration,$course,$regno,$fname,$mname,$lname,$gender,$contactno,$emailid,$emcntno,$gurname,$gurrelation,$gurcntno,$caddress,$ccity,$cpincode,$paddress,$pcity,$ppincode);
+        $rc=$stmt->bind_param('iiiiisissssssisissississi',$roomno,$hostel,$seater,$feespm,$foodstatus,$stayfrom,$duration,$course,$regno,$fname,$mname,$lname,$gender,$contactno,$emailid,$emcntno,$gurname,$gurrelation,$gurcntno,$caddress,$ccity,$cpincode,$paddress,$pcity,$ppincode);
         $stmt->execute();
         echo"<script>alert('Requested Student Has Been Registered!');</script>";
     }
@@ -169,16 +170,16 @@
                             <div class="card-body">
                                 <h4 class="card-title">Hostel</h4>
                                     <div class="form-group mb-4">
-                                        <select class="custom-select mr-sm-2" name="room" id="room" onChange="getSeater(this.value);" onBlur="checkAvailability()" required id="inlineFormCustomSelect">
+                                        <select class="custom-select mr-sm-2" name="hostel" id="hostel" required id="inlineFormCustomSelect">
                                             <option selected>Select...</option>
-                                            <?php $query ="SELECT * FROM rooms";
+                                            <?php $query ="SELECT * FROM hostel";
                                             $stmt2 = $mysqli->prepare($query);
                                             $stmt2->execute();
                                             $res=$stmt2->get_result();
                                             while($row=$res->fetch_object())
                                             {
                                             ?>
-                                            <option value="<?php echo $row->room_no;?>"> <?php echo $row->room_no;?></option>
+                                            <option value="<?php echo $row->Hostel_name;?>"> <?php echo $row->Hostel_name;?></option>
                                             <?php } ?>
                                         </select>
                                         
@@ -273,7 +274,7 @@
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="customRadio1" value="1" name="foodstatus"
                                         class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Required <code>Extra $211 Per Month</code></label>
+                                    <label class="custom-control-label" for="customRadio1">Required <code>Extra ₹7000 Per Month</code></label>
                                 </div>
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="customRadio2" value="0" name="foodstatus"
