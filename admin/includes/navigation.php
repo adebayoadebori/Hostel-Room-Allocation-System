@@ -8,16 +8,21 @@
                     <!-- ============================================================== -->
                     <div class="navbar-brand">
                         <!-- Logo icon -->
-                        <a href="https://vitbhopal.ac.in/">
+                        <a href="dashboard.php">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
-                                <img src="../assets/images/vitlogo.png" alt="homepage" class="dark-logo" />
+                                <img src="../assets/images/logo-icon-nav.png" alt="homepage" class="dark-logo" />
                                 <!-- Light Logo icon -->
-                                <img src="../assets/images/vitlogo.png" alt="homepage" class="light-logo" />
+                                <img src="../assets/images/logo-icon-nav.png" alt="homepage" class="light-logo" />
                             </b>
                             <!--End Logo icon -->
                             <!-- Logo text -->
-                            
+                            <span class="logo-text">
+                                <!-- dark Logo text -->
+                                <img src="../assets/images/logo-text-nav.png" alt="homepage" class="dark-logo" />
+                                <!-- Light Logo text -->
+                                <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                            </span>
                         </a>
                     </div>
                     <!-- ============================================================== -->
@@ -40,11 +45,9 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
                         
-                    <div class="page-breadcrumb">
-                            <?php include '../includes/greetings.php'?>
-                                <div class="d-flex align-items-center">
-                                </div>
-                    </div>
+                        <!-- ============================================================== -->
+                        <!-- create new IF REQUIRED-->
+                        <!-- ============================================================== -->
                         
                     </ul>
                     <!-- ============================================================== -->
@@ -74,7 +77,7 @@
                                             ?>	
 
                                 <span class="ml-2 d-none d-lg-inline-block"><span>Hello,</span> <span
-                                        class="text-cyan"><?php echo $row->username; }?></span> <i data-feather="chevron-down"
+                                        class="text-dark"><?php echo $row->username; }?></span> <i data-feather="chevron-down"
                                         class="svg-icon"></i></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
