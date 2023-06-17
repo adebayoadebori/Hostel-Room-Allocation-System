@@ -14,4 +14,5 @@ Security and privacy are paramount. RoomEase ensures the confidentiality of resi
 
 Simplify your hostel room allocation process with RoomEase and experience enhanced efficiency, resident satisfaction, and streamlined administration. Let RoomEase handle the complexities while you focus on creating a harmonious living environment for your hostel residents.
  
-
+![](1.png)\
+![](2.png)
